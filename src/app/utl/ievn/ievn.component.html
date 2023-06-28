@@ -36,7 +36,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let alumnos of alumnos">
+                <tr *ngFor="let alumnos of alumnos | alumnosFilter:listFilter">
                     <td><img *ngIf="muestraImg" [src]="alumnos.foto" [title]="alumnos.nombre" [style.width.px]="imageWidth"
                         [style.margin.px]="imageMargin"></td>
                     <td>{{alumnos.matricula}}</td>
